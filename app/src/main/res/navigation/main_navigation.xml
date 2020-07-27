@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/photosFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_photos"
+        android:id="@+id/photosFragment"
+        android:name="com.ahmet.yenen.myapplication.view.PhotosFragment"
+        android:label="PhotosFragment" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_photosFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_comments"
+        android:id="@+id/commentsFragment"
+        android:name="com.ahmet.yenen.myapplication.view.CommentsFragment"
+        android:label="CommentsFragment" />
+</navigation>
